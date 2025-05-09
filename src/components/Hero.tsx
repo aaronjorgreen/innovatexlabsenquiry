@@ -20,12 +20,12 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 py-16 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="flex flex-col items-center max-w-4xl mx-auto">
           <motion
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center mb-12"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-white mb-6">
               Transform Your Ideas Into{' '}
@@ -33,11 +33,11 @@ const Hero: React.FC = () => {
                 Market-Leading Products
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               We help innovative companies turn their boldest visions into reality with cutting-edge
               technology and strategic expertise.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="#services"
                 className="px-8 py-3 bg-orange-500 text-white font-medium rounded-full hover:bg-orange-600 transition-all"
@@ -57,14 +57,14 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative"
+            className="w-full max-w-2xl"
           >
             <div className="bg-black/40 backdrop-blur-xl p-6 md:p-8 rounded-2xl border border-orange-500/20 shadow-xl">
               <h2 className="text-2xl font-bold text-white mb-6">Get Started Today</h2>
               {showSuccessMessage ? (
                 <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 text-white">
                   <p className="text-center">
-                    Thanks for reaching out! We'll be in touch with you shortly.
+                    Thank you for submitting your form! We've received your information and will be in touch with next steps.
                   </p>
                 </div>
               ) : (

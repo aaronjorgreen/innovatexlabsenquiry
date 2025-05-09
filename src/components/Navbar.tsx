@@ -27,50 +27,23 @@ const Navbar: React.FC = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <Beaker className="h-8 w-8 text-orange-500 mr-2" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
-              Innovate X Labs
-            </span>
-          </div>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
-            <a
-              href="#about"
-              className="text-white hover:text-orange-400 transition-colors font-medium"
-            >
-              About
-            </a>
-            <a
-              href="#services"
-              className="text-white hover:text-orange-400 transition-colors font-medium"
-            >
-              Services
-            </a>
-            <a
-              href="#testimonials"
-              className="text-white hover:text-orange-400 transition-colors font-medium"
-            >
-              Testimonials
-            </a>
-            <a
-              href="#contact"
-              className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition-all"
-            >
-              Contact Us
-            </a>
-          </div>
-
-          {/* Mobile Navigation Toggle */}
-          <div className="md:hidden">
+        <div className="flex justify-center items-center relative">
+          {/* Mobile menu button - absolute positioned on the left */}
+          <div className="md:hidden absolute left-0">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="text-white hover:text-orange-400 transition-colors"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
+          </div>
+
+          {/* Centered logo */}
+          <div className="flex items-center">
+            <Beaker className="h-8 w-8 text-orange-500 mr-2" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+              Innovate X Labs
+            </span>
           </div>
         </div>
       </div>
@@ -99,13 +72,6 @@ const Navbar: React.FC = () => {
               onClick={() => setIsOpen(false)}
             >
               Testimonials
-            </a>
-            <a
-              href="#contact"
-              className="bg-gradient-to-r from-orange-400 to-orange-600 text-white px-5 py-2 rounded-full hover:shadow-lg transition-all text-center"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact Us
             </a>
           </div>
         </div>
